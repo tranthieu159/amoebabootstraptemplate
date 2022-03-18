@@ -146,7 +146,7 @@ img {
   position: relative;
   width: 100%;
   height: 75vh;
-  background: url(./img/hero_bgr.jpg) top center;
+  background: url(../img/hero_bgr.jpg) top center;
   background-size: cover;
   margin-bottom: -80px;
 }
@@ -199,6 +199,10 @@ img {
 .hero_btn:hover {
   background-color: var(--primary-text-color);
   color: #2d6760;
+}
+
+header.header.change {
+  height: 58px;
 }
 
 .main {
@@ -303,7 +307,7 @@ img {
 }
 
 .call_to_ation {
-  background: linear-gradient(rgba(1, 41, 42, 0.5), rgba(7, 56, 57, 0.5)), url(./img/cta_bgr.jpg) fixed center center;
+  background: linear-gradient(rgba(1, 41, 42, 0.5), rgba(7, 56, 57, 0.5)), url(../img/cta_bgr.jpg) fixed center center;
   background-size: cover;
   padding: 60px 0;
 }

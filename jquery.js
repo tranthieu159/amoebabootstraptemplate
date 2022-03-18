@@ -1,4 +1,14 @@
 $(document).ready(function () {
+    // change header
+    $(window).scroll(function (e) { 
+        let top = $('body, html').scrollTop();
+        if(top >= 360) {
+            $('.header').addClass('change')
+        } else {
+            $('.header').removeClass('change')
+        }
+    });
+
     // action Menu bar
     $('.header_menu').on('click',function (e) { 
         e.preventDefault();
@@ -17,7 +27,7 @@ $(document).ready(function () {
     $('.header_nav ul li:nth-child(2) a').on('click', function (e) { 
         e.preventDefault();
         $('body, html').animate({ 
-            scrollTop: $('.main').offset().top - 80,
+            scrollTop: $('.main').offset().top - 58,
         }, 500);
     });
 
@@ -25,7 +35,7 @@ $(document).ready(function () {
     $('.hero_btn').on('click', function (e) { 
         e.preventDefault();
         $('body, html').animate({
-            scrollTop: $('.main').offset().top - 80,  
+            scrollTop: $('.main').offset().top - 58,  
         }, 500);
     });
 
@@ -33,7 +43,7 @@ $(document).ready(function () {
     $('.header_nav ul li:nth-child(3) a').on('click', function (e) { 
         e.preventDefault();
         $('body, html').animate({
-            scrollTop: $('.services').offset().top - 80,  
+            scrollTop: $('.services').offset().top - 58,  
         }, 500);
     });
 
@@ -49,7 +59,7 @@ $(document).ready(function () {
     $('.header_nav ul li:nth-child(4) a').on('click', function (e) { 
         e.preventDefault();
         $('body, html').animate({
-            scrollTop: $('.portfolio').offset().top - 80,  
+            scrollTop: $('.portfolio').offset().top - 58,  
         }, 500);
     });
 
@@ -103,7 +113,7 @@ $(document).ready(function () {
     $('.header_nav ul li:nth-child(5) a').on('click', function (e) { 
         e.preventDefault();
         $('body, html').animate({
-            scrollTop: $('.team').offset().top - 80,
+            scrollTop: $('.team').offset().top - 58,
         }, 500);
     });
 
@@ -111,7 +121,7 @@ $(document).ready(function () {
     $('.header_nav ul li:nth-child(7) a').on('click', function (e) { 
         e.preventDefault();
         $('body, html').animate({
-            scrollTop: $('.contact').offset().top - 80,
+            scrollTop: $('.contact').offset().top - 58,
         }, 500);
     });
 });
