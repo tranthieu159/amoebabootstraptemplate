@@ -470,7 +470,7 @@ C-o : column offset- vị trí của element theo chiều ngang */
         display: none;
     }
 
-    .wide .l-1,
+    /* .wide .l-1,
     .wide .l-2,
     .wide .l-2-4,
     .wide .l-3,
@@ -484,7 +484,7 @@ C-o : column offset- vị trí của element theo chiều ngang */
     .wide .l-11,
     .wide .l-12 {
         display: block;
-    }
+    } */
 
     .wide .l-1 {
         flex: 0 0 8.33333%;

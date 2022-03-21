@@ -65,32 +65,21 @@ $(document).ready(function () {
 
     // add filter_active
     $('.portfolio_filters li').on('click', function (e) {
+        console.log('.portfolio_filters li')
         
         e.preventDefault();
         $('.portfolio_filters li.filter_active').removeClass('filter_active')
         $(this).addClass('filter_active')
         
-    });
-    
-    $('.portfolio_filters li:nth-child(2)').on('click', function (e) {
-        e.preventDefault();
-        $('.portfolio_list .filter_web').addClass('hide')
-        $('.portfolio_list .filter_card').addClass('hide')
-        $('.portfolio_list .filter_app').removeClass('hide')
-    });
+        let list = $(this).data('filter')
 
-    $('.portfolio_filters li:nth-child(3)').on('click', function (e) {
-        e.preventDefault();
-        $('.portfolio_list .filter_card').removeClass('hide')
-        $('.portfolio_list .filter_web').addClass('hide')
-        $('.portfolio_list .filter_app').addClass('hide')
-    });
-
-    $('.portfolio_filters li:nth-child(4)').on('click', function (e) {
-        e.preventDefault();
-        $('.portfolio_list .filter_web').removeClass('hide')
-        $('.portfolio_list .filter_card').addClass('hide')
-        $('.portfolio_list .filter_app').addClass('hide')
+        $('.portfolio_item').each(function() {
+            if($(this).hasClass(list)) {
+                $(this).removeClass('hide')
+            } else {
+                $(this).addClass('hide')
+            }
+        })
     });
 
     $('.portfolio_filters li:nth-child(1)').on('click', function (e) {
@@ -100,7 +89,6 @@ $(document).ready(function () {
         $('.portfolio_list .filter_app').removeClass('hide')
     });
 
-    
     
     // ask and question
     $('.fap_question').slideUp();
