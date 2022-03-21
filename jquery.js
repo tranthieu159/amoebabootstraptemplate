@@ -65,7 +65,6 @@ $(document).ready(function () {
 
     // add filter_active
     $('.portfolio_filters li').on('click', function (e) {
-        console.log('.portfolio_filters li')
         
         e.preventDefault();
         $('.portfolio_filters li.filter_active').removeClass('filter_active')
